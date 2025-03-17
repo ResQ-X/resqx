@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      color: #333;
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      position: relative;
+    }
+    
+    /* Executive Summary Section */
+    .executive-summary {
+      background: #FF6B00;
+      color: white;
+      padding: 40px;
+      border-radius: 15px;
+      margin-bottom: 40px;
+      box-shadow: 0 8px 20px rgba(255, 107, 0, 0.2);
+    }
+    
+    .logo {
+      font-size: 42px;
+      font-weight: 800;
+      margin-right: 20px;
+      color: white;
+      margin-bottom: 10px;
+    }
+    
+    .tagline {
+      font-size: 18px;
+      font-weight: 300;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+    
+    .summary-content {
+      font-size: 20px;
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+    
+    .stats-container {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    .stat-item {
+      flex: 1;
+      padding: 15px;
+      background-color: rgba(255, 255, 255, 0.15);
+      border-radius: 10px;
+      margin: 0 10px;
+    }
+    
+    .stat-number {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    
+    .stat-label {
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+    
+    /* Vision & Mission Section */
+    .vision-mission {
+      display: flex;
+      margin-bottom: 40px;
+      gap: 20px;
+    }
+    
+    .vision-box, .mission-box {
+      flex: 1;
+      background-color: #FFF8F0;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .box-title {
+      font-size: 24px;
+      color: #FF6B00;
+      margin-bottom: 15px;
+      position: relative;
+      padding-bottom: 10px;
+      border-bottom: 3px solid #FF6B00;
+    }
+    
+    /* Services Section */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+    
+    .service-card {
+      background-color: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .service-icon {
+      background-color: #FF6B00;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    
+    .service-content {
+      padding: 25px;
+    }
+    
+    .service-title {
+      font-size: 22px;
+      color: #FF6B00;
+      margin-bottom: 15px;
+    }
+    
+    /* Advantages Section */
+    .advantages {
+      background-color: #FFF8F0;
+      padding: 40px;
+      border-radius: 15px;
+      margin-bottom: 40px;
+    }
+    
+    .advantages-title {
+      font-size: 32px;
+      color: #333;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    
+    .advantages-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+    
+    .advantage-item {
+      display: flex;
+      align-items: flex-start;
+    }
+    
+    .advantage-icon {
+      background-color: #FF6B00;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      margin-right: 15px;
+      flex-shrink: 0;
+      font-weight: bold;
+    }
+    
+    .advantage-content {
+      flex-grow: 1;
+    }
+    
+    .advantage-title {
+      font-size: 20px;
+      color: #FF6B00;
+      margin-bottom: 10px;
+    }
+    
+    /* Pricing Section */
+    .pricing-section {
+      margin-bottom: 40px;
+    }
+    
+    .pricing-title {
+      font-size: 32px;
+      color: #333;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    
+    .pricing-subtitle {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    
+    .pricing-plan {
+      background-color: white;
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .plan-title {
+      font-size: 24px;
+      color: #FF6B00;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #FFE4CC;
+    }
+    
+    .plan-description {
+      margin-bottom: 20px;
+    }
+    
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .price-row:last-child {
+      border-bottom: none;
+    }
+    
+    .price-name {
+      font-weight: 600;
+    }
+    
+    .price-value {
+      color: #FF6B00;
+      font-weight: 600;
+    }
+    
+    .plan-details {
+      margin-top: 20px;
+      background-color: #FFF8F0;
+      padding: 15px;
+      border-radius: 10px;
+    }
+    
+    .plan-details h4 {
+      margin-top: 0;
+      color: #FF6B00;
+    }
+    
+    /* Mobile App Section */
+    .app-showcase {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+      background-color: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .app-info {
+      flex: 1;
+      padding: 40px;
+    }
+    
+    .app-title {
+      font-size: 28px;
+      color: #FF6B00;
+      margin-bottom: 20px;
+    }
+    
+    .app-features {
+      margin-top: 20px;
+    }
+    
+    .app-feature {
+      margin-bottom: 15px;
+    }
+    
+    .feature-number {
+      display: inline-block;
+      background-color: #FF6B00;
+      color: white;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 24px;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+    
+    /* How It Works Section */
+    .how-it-works {
+      margin-bottom: 40px;
+    }
+    
+    .steps-container {
+      display: flex;
+      position: relative;
+    }
+    
+    .step {
+      flex: 1;
+      padding: 30px 20px;
+      background-color: white;
+      border-radius: 10px;
+      margin: 0 15px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      position: relative;
+      z-index: 1;
+    }
+    
+    .step-number {
+      width: 40px;
+      height: 40px;
+      background-color: #FF6B00;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin: 0 auto 15px;
+    }
+    
+    .step-title {
+      font-size: 20px;
+      color: #FF6B00;
+      margin-bottom: 10px;
+    }
+    
+    .step-line {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background-color: #eee;
+      z-index: 0;
+      transform: translateY(-50%);
+    }
+    
+    /* Service Guarantees */
+    .guarantees {
+      background-color: #FFF8F0;
+      padding: 40px;
+      border-radius: 15px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    
+    .guarantees-title {
+      font-size: 28px;
+      color: #FF6B00;
+      margin-bottom: 30px;
+    }
+    
+    .guarantee-items {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    
+    .guarantee-item {
+      width: 30%;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .guarantee-number {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background-color: #FF6B00;
+      color: white;
+      border-radius: 50%;
+      line-height: 40px;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+    
+    .guarantee-text {
+      font-weight: 600;
+    }
+    
+    /* Performance Metrics */
+    .metrics-section {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+    
+    .metric-box {
+      flex: 1;
+      background-color: white;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .metric-title {
+      font-size: 20px;
+      color: #FF6B00;
+      margin-bottom: 20px;
+    }
+    
+    .metric-value {
+      font-size: 36px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    
+    .metric-label {
+      color: #666;
+    }
+    
+    .metric-comparison {
+      font-size: 16px;
+      color: #999;
+      margin-top: 15px;
+    }
+    
+    /* Coverage Areas */
+    .coverage-section {
+      background-color: white;
+      padding: 30px;
+      border-radius: 15px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .coverage-title {
+      font-size: 24px;
+      color: #FF6B00;
+      margin-bottom: 20px;
+    }
+    
+    .coverage-list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .coverage-area {
+      width: 25%;
+      padding: 10px;
+      font-size: 16px;
+    }
+    
+    .coverage-number {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-color: #FF6B00;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 20px;
+      margin-right: 5px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    
+    /* Founder Section */
+    .founder-section {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      margin-bottom: 40px;
+    }
+    
+    .founder-image {
+      width: 30%;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .founder-info {
+      width: 70%;
+      padding: 30px;
+    }
+    
+    .founder-name {
+      font-size: 28px;
+      color: #FF6B00;
+      margin-bottom: 5px;
+    }
+    
+    .founder-title {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+    
+    /* Contact Section */
+    .contact-section {
+      background: #FF6B00;
+      padding: 40px; 
+      border-radius: 15px;
+      color: white;
+      margin-bottom: 40px;
+    }
+    
+    .contact-title {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+    
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background-color: white;
+      color: #FF6B00;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      flex-shrink: 0;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    
+    .contact-info h3 {
+      margin: 0 0 5px;
+      font-size: 18px;
+    }
+    
+    .contact-info p {
+      margin: 0;
+      font-size: 16px;
+    }
+    
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+    }
+    
+    @media print {
+      body {
+        font-size: 12pt;
+      }
+      
+      .container {
+        width: 100%;
+        max-width: none;
+      }
+      
+      .step, .service-card, .advantage-item, .metric-box, .coverage-area {
+        page-break-inside: avoid;
+      }
+      
+      .executive-summary, .vision-mission, .app-showcase, .how-it-works, .guarantees, 
+      .metrics-section, .coverage-section, .founder-section, .contact-section {
+        page-break-before: always;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Executive Summary Section -->
+    <section class="executive-summary">
+      <div class="logo">ResQ-X</div>
+      <div class="tagline">Your Peace of Mind, Our Priority</div>
+      
+      <div class="summary-content">
+        ResQ-X is transforming roadside assistance in Nigeria through technology and reliable service. We provide businesses with 24/7 on-demand support, customizable pricing plans, and a commitment to minimizing vehicle downtime. Our innovative mobile app connects your fleet with our network of skilled technicians for seamless service delivery.
+      </div>
+      
+      <div class="stats-container">
+        <div class="stat-item">
+          <div class="stat-number">15min</div>
+          <div class="stat-label">Average Response Time</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">Service Availability</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Service Reliability</div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Vision & Mission Section -->
+    <section class="vision-mission">
+      <div class="vision-box">
+        <h2 class="box-title">Our Vision</h2>
+        <p>Our vision is to lead Nigeria in roadside assistance, setting new standards in response times, customer satisfaction, and technology integration. We're committed to expanding nationwide to offer all Nigerian motorists peace of mind on the road.</p>
+      </div>
+      
+      <div class="mission-box">
+        <h2 class="box-title">Our Mission</h2>
+        <p>ResQ-X aims to revolutionize roadside assistance in Nigeria by providing fast, affordable, and reliable services through innovative technology solutions. We're dedicated to minimizing disruptions and ensuring business continuity for all our clients.</p>
+      </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section>
+      <h2 style="text-align: center; color: #333; margin-bottom: 30px; font-size: 32px;">Our Comprehensive Services</h2>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">Roadside Assistance</div>
+          <div class="service-content">
+            <h3 class="service-title">Roadside Assistance</h3>
+            <p>Our skilled technicians provide on-site battery jumpstarts, tire changes, lockout services, and minor repairs. We'll get your vehicles back on the road swiftly, minimizing business disruptions.</p>
+            <p><strong>Response Time Guarantee:</strong> If we don't arrive within 20 minutes in covered areas, your next service call is free.</p>
+          </div>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">Fuel Delivery</div>
+          <div class="service-content">
+            <h3 class="service-title">Fuel Delivery</h3>
+            <p>Never let an empty tank disrupt your operations. Our fuel delivery service ensures your vehicles stay operational without the hassle of finding a gas station. You only pay for the fuel—delivery is included in your service plan.</p>
+            <p><strong>Coverage:</strong> Available across all our service areas with plans for expansion to additional cities in 2025.</p>
+          </div>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">Vehicle Recovery</div>
+          <div class="service-content">
+            <h3 class="service-title">Vehicle Recovery</h3>
+            <p>Our towing service ensures quick and safe recovery with transparent, distance-based pricing. We provide 24/7 assistance with an average response time of just 15 minutes—significantly better than the industry standard.</p>
+            <p><strong>Fleet Capacity:</strong> Our recovery fleet includes vehicles capable of handling everything from motorcycles to 3.5-ton commercial vehicles.</p>
+          </div>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">Vehicle Health Check</div>
+          <div class="service-content">
+            <h3 class="service-title">Vehicle Health Check</h3>
+            <p>Prevent costly breakdowns with our comprehensive vehicle health checks. Our certified technicians identify potential issues before they escalate, helping you maintain your fleet in optimal condition and reduce long-term maintenance costs.</p>
+            <p><strong>Business Benefit:</strong> Reduce fleet downtime by up to 60% with our preventive maintenance approach and detailed health reports.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Coverage Areas -->
+    <section class="coverage-section">
+      <h2 class="coverage-title">Our Service Coverage Areas</h2>
+      <p>ResQ-X currently operates throughout these areas with plans to expand nationwide:</p>
+      
+      <div class="coverage-list">
+        <div class="coverage-area">
+          <span class="coverage-number">1</span>
+          Ikeja
+        </div>
+        <div class="coverage-area">
+          <span class="coverage-number">2</span>
+          Victoria Island
+        </div>
+        <div class="coverage-area">
+          <span class="coverage-number">3</span>
+          Lekki
+        </div>
+        <div class="coverage-area">
+          <span class="coverage-number">4</span>
+          Ajah
+        </div>
+        <div class="coverage-area">
+          <span class="coverage-number">5</span>
+          Ikorodu
+        </div>
+        <div class="coverage-area">
+          <span class="coverage-number">6</span>
+          Gbagada
+        </div>
+        <div class="coverage-area">
+          <span class="coverage-number">7</span>
+          Yaba
+        </div>
+        <div class="coverage-area">
+          <span class="coverage-number">8</span>
+          Maryland
+        </div>
+        <div class="coverage-area">
+          <span class="coverage-number">9</span>
+          Surulere
+        </div>
+        <div class="coverage-area">
+          <span class="coverage-number">10</span>
+          Oshodi
+        </div>
+        <div class="coverage-area">
+          <span class="coverage-number">11</span>
+          Festac
+        </div>
+        <div class="coverage-area">
+          <span class="coverage-number">12</span>
+          Apapa
+        </div>
+      </div>
+      
+      <p style="margin-top: 20px;"><strong>Coming Soon:</strong> Abuja and Port Harcourt by Q3 2025</p>
+    </section>
+    
+    <!-- Performance Metrics -->
+    <section class="metrics-section">
+      <div class="metric-box">
+        <h3 class="metric-title">Average Response Time</h3>
+        <div class="metric-value">15 minutes</div>
+        <div class="metric-label">in covered areas</div>
+        <div class="metric-comparison">Industry average: 45+ minutes</div>
+      </div>
+      
+      <div class="metric-box">
+        <h3 class="metric-title">Customer Satisfaction Rating</h3>
+        <div class="metric-value">95%</div>
+        <div class="metric-label">based on post-service feedback</div>
+        <div class="metric-comparison">Industry average: 70%</div>
+      </div>
+      
+      <div class="metric-box">
+        <h3 class="metric-title">Fleet Availability</h3>
+        <div class="metric-value">99.8%</div>
+        <div class="metric-label">operational uptime</div>
+        <div class="metric-comparison">Industry average: 85%</div>
+      </div>
+    </section>
+    
+    <!-- Mobile App Showcase -->
+    <section class="app-showcase">
+      <div class="app-info">
+        <h2 class="app-title">Innovative Mobile Technology</h2>
+        <p>Our cutting-edge mobile app transforms how businesses manage roadside assistance. With real-time tracking, seamless communication, and comprehensive reporting, you'll always stay informed about the status of your fleet.</p>
+        
+        <div class="app-features">
+          <div class="app-feature">
+            <span class="feature-number">1</span>
+            Real-time vehicle tracking and technician dispatch visualization
+          </div>
+          <div class="app-feature">
+            <span class="feature-number">2</span>
+            Instant service requests with automated location detection
+          </div>
+          <div class="app-feature">
+            <span class="feature-number">3</span>
+            Service history and detailed reporting for fleet management
+          </div>
+          <div class="app-feature">
+            <span class="feature-number">4</span>
+            Direct communication with assigned technicians
+          </div>
+          <div class="app-feature">
+            <span class="feature-number">5</span>
+            Fleet management dashboard for business accounts
+          </div>
+        </div>
+      </div>
+      
+      <div style="flex: 1; padding: 20px; text-align: center; background-color: #f5f5f5; border-radius: 10px; margin: 20px;">
+        <div style="font-size: 24px; margin-bottom: 15px; color: #FF6B00;">ResQ-X Mobile App</div>
+        <div style="font-size: 16px; color: #666; line-height: 1.6;">
+          <p><strong>1.</strong> Real-time tracking interface</p>
+          <p><strong>2.</strong> Service request screen</p>
+          <p><strong>3.</strong> Fleet management dashboard</p>
+          <p><strong>4.</strong> Technician communication portal</p>
+          <p><strong>5.</strong> Service history reports</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Advantages Section -->
+    <section class="advantages">
+      <h2 class="advantages-title">The ResQ-X Business Advantage</h2>
+      
+      <div class="advantages-grid">
+        <div class="advantage-item">
+          <div class="advantage-icon">1</div>
+          <div class="advantage-content">
+            <h3 class="advantage-title">Lightning-Fast Response Times</h3>
+            <p>Our average response time of 15 minutes significantly outperforms the industry standard of 45+ minutes, minimizing downtime for your business operations.</p>
+          </div>
+        </div>
+        
+        <div class="advantage-item">
+          <div class="advantage-icon">2</div>
+          <div class="advantage-content">
+            <h3 class="advantage-title">Transparent, Affordable Pricing</h3>
+            <p>Choose from flexible subscription plans, pay-per-use options, or custom enterprise solutions with no hidden fees or unexpected charges.</p>
+          </div>
+        </div>
+        
+        <div class="advantage-item">
+          <div class="advantage-icon">3</div>
+          <div class="advantage-content">
+            <h3 class="advantage-title">24/7 Availability and Reliability</h3>
+            <p>Round-the-clock service ensures your business operations never stop due to vehicle breakdowns, regardless of time or day.</p>
+          </div>
+        </div>
+        
+        <div class="advantage-item">
+          <div class="advantage-icon">4</div>
+          <div class="advantage-content">
+            <h3 class="advantage-title">Peace of Mind and Security</h3>
+            <p>All our technicians are fully vetted, insured, and certified, providing safe and professional service you can trust with your valuable fleet assets.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+      <h2 style="text-align: center; color: #333; margin-bottom: 30px; font-size: 32px;">How ResQ-X Works</h2>
+      
+      <div class="steps-container">
+        <div class="step-line"></div>
+        
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3 class="step-title">Request Assistance</h3>
+          <p>Open the ResQ-X app, select your service need, and provide location details. Enterprise accounts can manage multiple vehicles and prioritize urgent requests.</p>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3 class="step-title">Responder Dispatched</h3>
+          <p>Our system automatically identifies and dispatches the nearest qualified technician. You'll receive real-time updates and ETA through the app.</p>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3 class="step-title">Service Delivered</h3>
+          <p>The technician arrives and provides the requested service with an average response time of 15 minutes in covered areas.</p>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3 class="step-title">Reporting & Feedback</h3>
+          <p>After service completion, receive a detailed report and provide feedback to help us continuously improve.</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Service Guarantees -->
+    <section class="guarantees">
+      <h2 class="guarantees-title">Our Service Guarantees</h2>
+      
+      <div class="guarantee-items">
+        <div class="guarantee-item">
+          <div class="guarantee-number">1</div>
+          <div class="guarantee-text">15-Minute Response Time or Your Next Service is Free</div>
+        </div>
+        
+        <div class="guarantee-item">
+          <div class="guarantee-number">2</div>
+          <div class="guarantee-text">Transparent Pricing With No Hidden Fees</div>
+        </div>
+        
+        <div class="guarantee-item">
+          <div class="guarantee-number">3</div>
+          <div class="guarantee-text">Certified, Insured, and Vetted Technicians</div>
+        </div>
+        
+        <div class="guarantee-item">
+          <div class="guarantee-number">4</div>
+          <div class="guarantee-text">Secure Vehicle Handling Guarantee</div>
+        </div>
+        
+        <div class="guarantee-item">
+          <div class="guarantee-number">5</div>
+          <div class="guarantee-text">100% Satisfaction Guarantee</div>
+        </div>
+        
+        <div class="guarantee-item">
+          <div class="guarantee-number">6</div>
+          <div class="guarantee-text">Real-Time Service Tracking</div>
+        </div>
+      </div>
+      
+      <p style="font-size: 14px; margin-top: 30px;">The 15-minute response time guarantee applies to covered areas during standard service hours (6am-10pm). See terms for details.</p>
+    </section>
+    
+    <!-- Meet Our Founder -->
+    <section class="founder-section">
+      <div class="founder-image">
+        <div style="width: 200px; height: 200px; background-color: #f5f5f5; border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: #FF6B00; font-weight: bold; font-size: 24px;">
+          <img src="img.jpg" alt="Founder" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">           
+        </div>
+      </div>
+      <div class="founder-info">
+        <h2 class="founder-name">Okoroji Nosa</h2>
+        <div class="founder-title">Founder & CEO</div>
+        <p>With over 15 years in logistics and transportation, Okoroji founded ResQ-X with a vision to revolutionize roadside assistance in Nigeria. His experience in fleet management and technology innovation has shaped our company's commitment to excellence and customer satisfaction.</p>
+        <p>"At ResQ-X, we're not just providing a service – we're creating a movement that challenges the status quo, prioritizes customer needs, and harnesses technology to make roadside assistance more accessible, convenient, and reliable than ever before."</p>
+      </div>
+    </section>
+    
+    <!-- Pricing Plans Section -->
+    <section class="pricing-section">
+      <h2 class="pricing-title">Flexible Pricing Plans for Every Business</h2>
+      <p class="pricing-subtitle">Choose the plan that best fits your business needs and fleet size</p>
+      
+      <!-- Subscription Model -->
+      <div class="pricing-plan">
+        <h3 class="plan-title">Subscription Model</h3>
+        <p class="plan-description">Pay an annual or biannual fee per vehicle for a set number of monthly call-outs and free towing distance. Ideal for businesses seeking consistent, hassle-free coverage.</p>
+        
+        <div class="price-row">
+          <div class="price-name">Basic Plan (Biannual)</div>
+          <div class="price-value">NGN 54,000</div>
+        </div>
+        <div class="price-row">
+          <div class="price-name">Basic Plan (Annual)</div>
+          <div class="price-value">NGN 108,000</div>
+        </div>
+        <div class="price-row">
+          <div class="price-name">Standard Plan (Biannual)</div>
+          <div class="price-value">NGN 108,000</div>
+        </div>
+        <div class="price-row">
+          <div class="price-name">Standard Plan (Annual)</div>
+          <div class="price-value">NGN 216,000</div>
+        </div>
+        <div class="price-row">
+          <div class="price-name">Premium Plan (Biannual)</div>
+          <div class="price-value">NGN 180,000</div>
+        </div>
+        <div class="price-row">
+          <div class="price-name">Premium Plan (Annual)</div>
+          <div class="price-value">NGN 360,000</div>
+        </div>
+        
+        <div class="plan-details">
+          <h4>Plan Benefits</h4>
+          <p><strong>Basic Plan:</strong> 1 Call-out per month, 5 km free towing distance</p>
+          <p><strong>Standard Plan:</strong> 1 Call-out per month, 15 km free towing distance</p>
+          <p><strong>Premium Plan:</strong> 2 Call-outs per month, 25 km free towing distance</p>
+          <p><strong>After Exceeding Free Callouts:</strong> NGN 20,000 per incident for all plans</p>
+          <p><strong>After Exceeding Free Towing KM:</strong></p>
+          <ul>
+            <li>Basic: NGN 2,500/km</li>
+            <li>Standard: NGN 2,000/km</li>
+            <li>Premium: NGN 1,800/km</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Pay-Per-Use Model -->
+      <div class="pricing-plan">
+        <h3 class="plan-title">Pay-Per-Use Model</h3>
+        <p class="plan-description">Pay a monthly admin fee to ensure service readiness, then pay only when you use a service. Perfect for businesses with unpredictable service needs.</p>
+        
+        <div class="price-row">
+          <div class="price-name">1-20 vehicles (Monthly Admin Fee)</div>
+          <div class="price-value">NGN 250,000</div>
+        </div>
+        <div class="price-row">
+          <div class="price-name">21-50 vehicles (Monthly Admin Fee)</div>
+          <div class="price-value">NGN 500,000</div>
+        </div>
+        <div class="price-row">
+          <div class="price-name">51+ vehicles (Monthly Admin Fee)</div>
+          <div class="price-value">NGN 800,000</div>
+        </div>
+        
+        <div class="plan-details">
+          <h4>Service Rates</h4>
+          <p><strong>Towing Service:</strong> Calculated with variables including Base fare, distance per KM, and per minute charges</p>
+          <p><strong>First Responder Service (On-Site Support):</strong> NGN 20,000 flat fee</p>
+          <p><strong>Emergency Fuel Delivery:</strong> NGN 10,000 (excluding fuel cost)</p>
+        </div>
+      </div>
+      
+      <!-- Tier Incident Bundle -->
+      <div class="pricing-plan">
+        <h3 class="plan-title">Tier Incident Bundle</h3>
+        <p class="plan-description">Pre-purchase a bundle of incidents at discounted rates. Each incident covers any roadside service. Flexible and cost-effective for businesses with seasonal or bulk service needs.</p>
+        
+        <div class="price-row">
+          <div class="price-name">10 Incidents (3 months)</div>
+          <div class="price-value">NGN 900,000 (NGN 90,000 per incident)</div>
+        </div>
+        <div class="price-row">
+          <div class="price-name">30 Incidents (6 months)</div>
+          <div class="price-value">NGN 2,400,000 (NGN 80,000 per incident)</div>
+        </div>
+        <div class="price-row">
+          <div class="price-name">50 Incidents (6 months)</div>
+          <div class="price-value">NGN 3,500,000 (NGN 70,000 per incident)</div>
+        </div>
+      </div>
+      
+      <!-- Annual Retainers -->
+      <div class="pricing-plan">
+        <h3 class="plan-title">Annual Retainers</h3>
+        <p class="plan-description">Pay a one-time annual fee for guaranteed, priority service with discounted per-incident rates. Best for businesses needing reliable, year-round coverage.</p>
+        
+        <div class="price-row">
+          <div class="price-name">Annual Retainer - Level 1</div>
+          <div class="price-value">NGN 5,000,000</div>
+        </div>
+        <div class="price-row">
+          <div class="price-name">Discounted Per-Incident Rate - Level 1</div>
+          <div class="price-value">NGN 70,000</div>
+        </div>
+        <div class="price-row">
+          <div class="price-name">Annual Retainer - Level 2</div>
+          <div class="price-value">NGN 10,000,000</div>
+        </div>
+        <div class="price-row">
+          <div class="price-name">Discounted Per-Incident Rate - Level 2</div>
+          <div class="price-value">NGN 60,000</div>
+        </div>
+        <div class="price-row">
+          <div class="price-name">Annual Retainer - Level 3</div>
+          <div class="price-value">NGN 15,000,000</div>
+        </div>
+        <div class="price-row">
+          <div class="price-name">Discounted Per-Incident Rate - Level 3</div>
+          <div class="price-value">NGN 55,000</div>
+        </div>
+        
+        <div class="plan-details">
+          <h4>Additional Benefits</h4>
+          <ul>
+            <li>Priority dispatch - your calls jump to the front of the queue</li>
+            <li>Dedicated account manager</li>
+            <li>Quarterly fleet health assessments</li>
+            <li>Customized reporting dashboard</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <h2 class="contact-title">Get in Touch</h2>
+      
+      <div class="contact-grid">
+        <div class="contact-item">
+          <div class="contact-icon">P</div>
+          <div class="contact-info">
+            <h3>Phone</h3>
+            <p>+234 811 117 3779</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">E</div>
+          <div class="contact-info">
+            <h3>Email</h3>
+            <p>hello@resqx.net</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">A</div>
+          <div class="contact-info">
+            <h3>Address</h3>
+            <p>18 Gedegede Ebute off Mobil Road, Ikota, Lagos</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">H</div>
+          <div class="contact-info">
+            <h3>Business Hours</h3>
+            <p>24/7 Service & Support</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">W</div>
+          <div class="contact-info">
+            <h3>Website</h3>
+            <p>www.resqx.net</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <footer>
+      <p>&copy; 2025 ResQ-X Roadside Assistance. All rights reserved.</p>
+      <p>Your Peace of Mind, Our Priority</p>
+    </footer>
+  </div>
+</body>
+</html>
